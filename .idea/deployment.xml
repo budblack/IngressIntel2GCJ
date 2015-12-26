@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Aliyun" uploadOnCheckin="993b3ed9-bd3f-40c1-8b27-a3f7a37c7a4a">
+    <serverData>
+      <paths name="Aliyun">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/Lab/Ingress/IngressIntel2GCJ/" local="$PROJECT_DIR$" web="/Lab/Ingress/IngressIntel2GCJ/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myUploadOnCheckinName" value="Aliyun" />
+  </component>
+</project>

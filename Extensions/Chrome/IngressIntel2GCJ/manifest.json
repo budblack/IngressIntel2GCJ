@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Ingress",
+  "version": "0.1",
+  "description": "The first extension that I made.",
+  "browser_action": {
+    "default_icon": "Icon.png"
+  },
+  "permissions": [
+    "http://*/",
+    "https://*/",
+    "bookmarks",
+    "tabs",
+    "history"
+  ] ,
+  "content_scripts": [
+    {
+      "matches": ["https://www.ingress.com/*"],
+      "css": ["style.css"],
+      "js": ["jquery-2.1.4.js","Init.js"]
+    }
+  ]
+}

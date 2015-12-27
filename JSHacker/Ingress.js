@@ -293,11 +293,3 @@ function bd2wgs(bdLat, bdLng) {
     return gcj2wgs(gcj.lat, gcj.lng)
 }
 exports.bd2wgs = bd2wgs;
-
-var _hmt = _hmt || [];
-(function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?838220e6c6be41482d150e5b1c46257d";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-})();

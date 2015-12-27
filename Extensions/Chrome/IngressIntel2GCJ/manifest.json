@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
   "name": "IngressIntel2GCJ",
-  "version": "0.1",
+  "version": "0.2.1",
   "description": "fix the Ingress Intel map to GCJ02",
   "browser_action": {
-    "default_icon": "Icon.png"
+    "default_icon": "Icon128.png"
   },
   "permissions": [
     "http://*/",
@@ -13,6 +13,9 @@
     "tabs",
     "history"
   ] ,
+  "icons": { "16": "Icon16.png",
+    "48": "Icon48.png",
+    "128": "Icon128.png" },
   "content_scripts": [
     {
       "matches": ["https://www.ingress.com/*"],

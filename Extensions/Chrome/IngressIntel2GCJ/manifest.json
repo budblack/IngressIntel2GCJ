@@ -3,8 +3,10 @@
   "name": "IngressIntel2GCJ",
   "version": "0.2.1",
   "description": "fix the Ingress Intel map to GCJ02",
-  "browser_action": {
-    "default_icon": "Icon128.png"
+  "page_action": {
+    "default_icon": "icons/Icon48.png",
+    "default_title": "IngressIntel2GCJ",
+    "default_popup": "popup.html"
   },
   "permissions": [
     "http://*/",
@@ -13,14 +15,12 @@
     "tabs",
     "history"
   ] ,
-  "icons": { "16": "Icon16.png",
-    "48": "Icon48.png",
-    "128": "Icon128.png" },
-  "content_scripts": [
-    {
-      "matches": ["https://www.ingress.com/*"],
+  "icons": { "16": "icons/Icon16.png",
+    "48": "icons/Icon48.png",
+    "128": "icons/Icon128.png" },
+  "content_scripts": [{
+      "matches": ["https://www.ingress.com/intel*"],
       "css": ["style.css"],
-      "js": ["jquery-2.1.4.js","Init.js"]
-    }
-  ]
+      "js": ["/js/jquery-2.1.4.js","/js/Init.js"]
+    }]
 }

@@ -1,19 +1,10 @@
 {
   "manifest_version": 2,
-  "name": "IngressIntel2GCJ",
-  "version": "0.2.1",
-  "description": "fix the Ingress Intel map to GCJ02",
-  "page_action": {
-    "default_icon": "icons/Icon48.png",
-    "default_title": "IngressIntel2GCJ",
-    "default_popup": "popup.html"
-  },
+  "name": "Ingress助手",
+  "version": "0.2.2",
+  "description": "描述是什么意思喵？",
   "permissions": [
-    "http://*/",
-    "https://*/",
-    "bookmarks",
-    "tabs",
-    "history"
+    "https://www.ingress.com/intel*"
   ] ,
   "icons": { "16": "icons/Icon16.png",
     "48": "icons/Icon48.png",

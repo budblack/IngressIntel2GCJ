@@ -1,6 +1,7 @@
 console.log("My Ingress loading.");
 ii = m_ii;
 Ff = m_Ff;
+cj = m_cj;
 console.log("Hacking function");
 
 //Marker
@@ -94,6 +95,27 @@ function m_Ff(a) {
     return null != a.latLng ? Cf(a.latLng) : null
 }
 
+function m_cj(a, b, c, d, f, g) {
+    this.f = new Ef(a, b, c);
+    this.f.IsGCJ = true;
+    this.c = new Ef(d, f, g);
+    this.c.IsGCJ = true;
+    this.a = {};
+    this.Xa = dj;
+    this.h = new google.maps.Polyline({
+        path: [Ff(this.f), Ff(this.c)],
+        geodesic: !0,
+        strokeColor: "#FFD200",
+        strokeOpacity: .9,
+        strokeWeight: 4,
+        clickable: !1,
+        cursor: "auto",
+        zIndex: 10
+    });
+    this.b = null;
+    this.g = 0;
+    this.j = new Wi(a, b, c, d, f, g)
+}
 //Mouse_Click
 function Jj(a) {
     var b = null, c = a.a, d = document.getElementById("portal_details_container"), f = Ff(a.c), g = a.getProjection().fromLatLngToContainerPixel(f), h = document.getElementById("map_canvas"), k = g.y, m = h.offsetHeight - k, g = g.x, h = h.offsetWidth - g, u = d.offsetWidth, d = d.offsetHeight, p;

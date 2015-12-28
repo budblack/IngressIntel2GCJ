@@ -1,9 +1,3 @@
-console.log("My Ingress loading.");
-ii = m_ii;
-Ff = m_Ff;
-cj = m_cj;
-console.log("Hacking function");
-
 //Marker
 function m_ii(a, b) {
     //console.log("m_ii");
@@ -161,9 +155,13 @@ function Jj(a) {
     return b
 }
 
-console.log("My Ingress loaded.");
+console.log("My Ingress loading.");
+ii = m_ii;
+Ff = m_Ff;
+m_cj.prototype = cj.prototype;
+cj = m_cj;
+console.log("Hacking function");
 //Ext
-
 var exports
 if (typeof module === "object" && exports) {
     exports = module.exports
@@ -316,3 +314,5 @@ function bd2wgs(bdLat, bdLng) {
     return gcj2wgs(gcj.lat, gcj.lng)
 }
 exports.bd2wgs = bd2wgs;
+
+console.log("My Ingress loaded.");

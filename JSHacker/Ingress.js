@@ -95,6 +95,7 @@ function m_Ff(a) {
     return null != a.latLng ? Cf(a.latLng) : null
 }
 
+//Polyline
 function m_cj(a, b, c, d, f, g) {
     this.f = new Ef(a, b, c);
     this.f.IsGCJ = true;

@@ -1,7 +1,15 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <title>Ingress Intel Map</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta name="name" itemprop="name" property="og:title" content="Ingress - Game Reality" />
+    <meta name="description" itemprop="description" property="og:description" content="The world around you is not what it seems. Our future is at stake and you must choose a side. Join my faction in Ingress - a global game of mystery, intrigue and conquest." />
+    <meta itemprop="image" property="og:image" content="//commondatastorage.googleapis.com/ingress.com/img/Ingress_logo_512px.png" />
+
     <link rel='stylesheet' type='text/css' href='/css/common.css' />
     <link rel='stylesheet' type='text/css' href='/css/map_icons.css' />
     <link rel='stylesheet' type='text/css' href='/css/misc_icons.css' />
@@ -12,10 +20,12 @@
     <link rel='stylesheet' type='text/css' href='/css/linkplanning_common.css' />
     <link rel='stylesheet' type='text/css' href='/css/linkplanning.css' />
     <link rel='stylesheet' type='text/css' href='/css/missions.css' />
+
     <link rel='stylesheet' type='text/css' href='https://storage.googleapis.com/ingress.com/artifacts/artifacts.css' />
-    <title>Title</title>
+
+
 </head>
-<body>
+
 <body onload="initialize()" id="dashboard">
 
 <div id="header">
@@ -119,10 +129,13 @@
         <div id="tm_header" style="display: none;"></div>
         <div id="tm_main" style="display: none;"></div>
     </div>
+
     <!-- Google Maps -->
     <div id="map_canvas"></div>
+
     <!-- Player Stats -->
     <div id="player_stats"></div>
+
     <!-- Game Stats -->
     <div id="game_stats">
         <div id="global_score"></div>
@@ -131,8 +144,10 @@
             <div id="rs_details_score"></div>
         </div>
     </div>
+
     <!-- Clear Planned Links Button -->
     <div id="clear_planned_links"></div>
+
     <!-- Geo Location Tools -->
     <div id="geotools">
         <form onSubmit="doGeocode(); return false;" name="geocode_name" id="geocode">
@@ -141,8 +156,10 @@
             <input type="submit" value="Search" />
         </form>
     </div>
+
     <!-- COMMs Panel -->
     <div id="comm"></div>
+
     <!--Portal filter. The visibility of the portal filter is changed when the document loads. -->
     <div id="filters_container" style="display:none;" class="unselectable">
         <div id="level_filter_container">
@@ -270,9 +287,11 @@
             </div>
         </div>
     </div><!-- /filters_container -->
+
     <!--Map display message-->
     <div id ="display_msg" style="display: none">
     </div>
+
     <!--Map loading message -->
     <div id="loading_msg">
         <div id="loading_msg_text">Loading Data...</div>
@@ -281,14 +300,42 @@
             <div id="loading_data_circle" class="rotate0"></div>
         </div>
     </div>
+
     <div id="portal_filter_header" class="unselectable bottom_right_tab_button">Filters</div>
+
     <!-- Dashboard stale data message -->
     <div id="butterbar" style="display: none;" class="box_drop_shadow">
     </div>
+
     <!-- Portal Level Indicator -->
     <div id="zoom_level_data"></div>
+
 </div>
-<script src="https://budblack.me/Lab/Ingress/IngressIntel2GCJ/JSHacker/Ingress-dev.js" type="text/javascript"></script>
-</body>
+<script type="text/javascript"
+        src="//maps.googleapis.com/maps/api/js?client=gme-nianticinc&amp;sensor=true&amp;v=3.12"></script>
+<script type="text/javascript" language="javascript">
+    var IS_VERSION_MOBILE = false;
+    var IS_DEVICE_TABLET = false;
+    var IS_DEVICE_MOBILE = false;
+    var MAP_PARAMS = {};
+    __var_PLAYER_INF__
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-71804733-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    var e = function(w) {eval(w);};
+</script>
+<script type="text/javascript" language="javascript">
+    var B = "";
+    var CS = {};
+</script>
+<script type="text/javascript" src="/jsc/gen_dashboard_8e91a4eb7ac2fc366cc50688c44e402b12082b04.js"></script>
+<script type="text/javascript" src="https://budblack.me/Lab/Ingress/IngressIntel2GCJ/JSHacker/Ingress.js"></script>
 </body>
 </html>

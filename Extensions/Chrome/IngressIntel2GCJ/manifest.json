@@ -12,9 +12,10 @@
     "matches": ["https://www.ingress.com/intel*"],
     "css": ["style.css"],
     "js": ["/js/jquery-2.1.4.js","/js/Init.js"],
-    "run_at": "document_end"
+    "run_at": "document_start"
   }],
   "permissions": [
     "https://www.ingress.com/intel*"
-  ]
+  ],
+  "web_accessible_resources":["teamplate/*"]
 }

@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "Ingress Assistant",
+    "description": "Extension: Name"
+  },
+  "extShortName": {
+    "message": "IA",
+    "description": "Extension: Short Name"
+  },
+  "extDescription": {
+    "message": "中国大陆地区Portal偏移修正插件",
+    "description": "Extension: Description"
+  }
+}

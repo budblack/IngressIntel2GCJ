@@ -6579,6 +6579,11 @@ function uo(a, b) {
         panControl: !1,
         styles: sh,
         zoom: f,
+        mapTypeControl:true,
+        mapTypeControlOptions: {
+            style:google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+            position:google.maps.ControlPosition.TOP_RIGHT
+        },
         streetViewControlOptions: {position: google.maps.ControlPosition.RIGHT_CENTER},
         zoomControlOptions: {position: google.maps.ControlPosition.RIGHT_CENTER}
     };

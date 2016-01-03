@@ -13,14 +13,14 @@ function m_ii(a, b) {
     //console.log("=========");
     b && (a.a = b);
     var c = a.a.g;
-    a.f && c ? a.f.setIcon(ci(a.c, a.a.s, a.a.c, a.b)) : a.f && !c ? (a.f.setMap(null), a.f = null) : !a.f && c && (a.f = new google.maps.Marker({
+    a.f && c ? a.f.setIcon(ci(a.c, a.a.s, a.a.c, a.b)) : a.f && !c ? (a.f.setMap(null), a.f = null) : !a.f && c && (a.f = new AMap.Marker({
         map: M,
         position: a.w,
         icon: ci(a.c, a.a.s, a.a.c, a.b),
         zIndex: a.a.b ? 32 : 12
     }), ji(a.f));
     var d = a.a.u;
-    a.m && d ? a.m.setIcon(di(a.c, a.a.m, a.b)) : a.m && !d ? (a.m.setMap(null), a.m = null) : !a.m && d && (a.m = new google.maps.Marker({
+    a.m && d ? a.m.setIcon(di(a.c, a.a.m, a.b)) : a.m && !d ? (a.m.setMap(null), a.m = null) : !a.m && d && (a.m = new AMap.Marker({
         map: M,
         position: a.w,
         icon: di(a.c, a.a.m, a.b),
@@ -29,7 +29,7 @@ function m_ii(a, b) {
     }));
     d = a.a.o;
     a.j && d ? a.j.setIcon(ei(a.c, a.a.h, a.b)) : a.j && !d ? (a.j.setMap(null), a.j =
-        null) : !a.j && d && (a.j = new google.maps.Marker({
+        null) : !a.j && d && (a.j = new AMap.Marker({
         map: M,
         position: a.w,
         icon: ei(a.c, a.a.h, a.b),
@@ -37,7 +37,7 @@ function m_ii(a, b) {
         zIndex: 44
     }));
     d = 1 < a.a.a;
-    a.g && d ? a.g.setIcon(fi(a.c, a.a.s, a.a.a, a.b)) : a.g && !d ? (a.g.setMap(null), a.g = null) : !a.g && d && (a.g = new google.maps.Marker({
+    a.g && d ? a.g.setIcon(fi(a.c, a.a.s, a.a.a, a.b)) : a.g && !d ? (a.g.setMap(null), a.g = null) : !a.g && d && (a.g = new AMap.Marker({
         map: M,
         position: a.w,
         icon: fi(a.c, a.a.s, a.a.a, a.b),
@@ -45,7 +45,7 @@ function m_ii(a, b) {
         zIndex: a.a.b ? 33 : 13
     }), c || ji(a.g));
     c = a.a.f;
-    a.o && c ? a.o.setIcon(ai(a.c, a.b)) : a.o && !c ? (a.o.setMap(null), a.o = null) : !a.o && c && (a.o = new google.maps.Marker({
+    a.o && c ? a.o.setIcon(ai(a.c, a.b)) : a.o && !c ? (a.o.setMap(null), a.o = null) : !a.o && c && (a.o = new AMap.Marker({
         map: M, position: a.w, icon: ai(a.c, a.b), clickable: !1, zIndex: a.a.b ?
             34 : 14
     }));
@@ -64,7 +64,7 @@ function m_ii(a, b) {
         if (a.h.length > a.u.length)for (c = a.u.length; c < a.h.length; c++)a.h[c].setMap(null);
         a.h.length = a.u.length;
         d = bi(a.c, a.u, a.b);
-        for (c = 0; c < a.h.length; c++)(f = a.h[c]) ? f.setIcon(d[c]) : a.h[c] = new google.maps.Marker({
+        for (c = 0; c < a.h.length; c++)(f = a.h[c]) ? f.setIcon(d[c]) : a.h[c] = new AMap.Marker({
             map: M,
             position: a.w,
             icon: d[c],
@@ -96,7 +96,7 @@ function m_cj(a, b, c, d, f, g) {
     this.c.IsGCJ = true;
     this.a = {};
     this.Xa = dj;
-    this.h = new google.maps.Polyline({
+    this.h = new AMap.Polyline({
         path: [Ff(this.f), Ff(this.c)],
         geodesic: !0,
         strokeColor: "#FFD200",
@@ -149,7 +149,7 @@ function Jj(a) {
     f = w.x - N;
     p = w.y - A;
     N < g && N <
-    h && d + 45 < k ? (p -= A + 45, Nj("bottom", d)) : N < g && N < h && d + 45 < m ? (p += A + 45, Nj("top")) : A < k && A < m && u + 45 < h ? (f += N + 45, Nj("left", A)) : A < k && A < m && u + 45 < g ? (f -= N + 45, Nj("right", A)) : (p -= A + 45, Nj("bottom", d), b = new google.maps.Point(w.x, w.y - (d + 45) / 2), b = a.getProjection().fromDivPixelToLatLng(b));
+    h && d + 45 < k ? (p -= A + 45, Nj("bottom", d)) : N < g && N < h && d + 45 < m ? (p += A + 45, Nj("top")) : A < k && A < m && u + 45 < h ? (f += N + 45, Nj("left", A)) : A < k && A < m && u + 45 < g ? (f -= N + 45, Nj("right", A)) : (p -= A + 45, Nj("bottom", d), b = new AMap.Point(w.x, w.y - (d + 45) / 2), b = a.getProjection().fromDivPixelToLatLng(b));
     wh(c, f, p);
     return b
 }

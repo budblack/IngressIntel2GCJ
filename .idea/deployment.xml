@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="阿里云" />
+  <component name="PublishConfigData" serverName="阿里云">
+    <serverData>
+      <paths name="阿里云">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/Lab/Ingress/IngressIntel2GCJ" local="$PROJECT_DIR$" web="/Lab/Ingress/IngressIntel2GCJ" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
 </project>

@@ -1,0 +1,8 @@
+
+*.xml
+
+.idea/*
+
+_windows/*
+
+inspection/*

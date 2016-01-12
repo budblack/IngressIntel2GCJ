@@ -1,7 +1,7 @@
 {
   "name": "__MSG_extName__",
   "short_name": "__MSG_extShortName__",
-  "version": "0.2.3.17",
+  "version": "0.2.3.26",
   "manifest_version": 2,
   "default_locale": "zh_CN",
   "description": "__MSG_extDescription__",
@@ -15,7 +15,12 @@
     "run_at": "document_start"
   }],
   "permissions": [
-    "https://www.ingress.com/intel*"
+    "http://*/",
+    "https://*/"
   ],
+  "background": {
+    "scripts": ["/js/background.js"],
+    "persistent": false
+  },
   "web_accessible_resources":["teamplate/*"]
 }

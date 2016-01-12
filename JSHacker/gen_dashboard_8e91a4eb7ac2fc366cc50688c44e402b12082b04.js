@@ -1686,7 +1686,8 @@ function Ne(a, b, c, d, f) {
 }
 Le.prototype.g = function (a, b) {
     var c = b.target;
-    if (me(c)) {
+    //if (me(c)) {
+    if (false) {
         this.a.reset();
         var d = a.f, f = JSON.parse(oe(c));
         "error" in f && "out of date" == f.error ? (d = Oe.l(), Pe(!1), d.g = !0, Qe("Please refresh for the latest version.")) : "error" in f && "RETRY" == f.error ? (De(this.b, a), Ge(this.a)) : n.setTimeout(na(d, a.b, f), 0)

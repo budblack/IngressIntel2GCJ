@@ -162,6 +162,76 @@ $(document).ready(function () {
         return b
     }
 
+    //Init_Map
+    function m_uo(a, b) {
+        var c = 25, d = 0, f = 3;
+        ib(MAP_PARAMS) ? (c = +Je("lat") || c, d = +Je("lng") || d, f = +Je("zoom") || f) : (c = D(MAP_PARAMS, "lat", c), d = D(MAP_PARAMS, "lng", d), f = D(MAP_PARAMS, "zoom", f));
+        var sh = [{
+            featureType: "all",
+            elementType: "all",
+            stylers: [{visibility: "on"}, {hue: "#131c1c"}, {saturation: "-50"}, {invert_lightness: !0}]
+        }, {
+            featureType: "water",
+            elementType: "all",
+            stylers: [{visibility: "on"}, {hue: "#005eff"}, {invert_lightness: !0}]
+        }, {featureType: "poi", stylers: [{visibility: "off"}]}, {
+            featureType: "transit",
+            elementType: "all",
+            stylers: [{visibility: "off"}]
+        }, {featureType: "road", elementType: "labels.icon", stylers: [{invert_lightness: !0}]}];
+
+        var g = {
+            backgroundColor: "#0b0c0d",
+            mapTypeId: google.maps.MapTypeId.HYBRID,
+            minZoom: 3,
+            panControl: !1,
+            styles: sh,
+            zoom: f,
+            mapTypeControl:true,
+            mapTypeControlOptions: {
+                style:google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+                position:google.maps.ControlPosition.TOP_RIGHT
+            },
+            streetViewControlOptions: {position: google.maps.ControlPosition.RIGHT_CENTER},
+            zoomControlOptions: {position: google.maps.ControlPosition.RIGHT_CENTER}
+        };
+        Ze(f);
+        c = new google.maps.LatLng(c, d);
+        a.a = new google.maps.Map(document.getElementById("map_canvas"),
+            g);
+        Kh(a.a);
+        new $n(a.a);
+        Cl(a.w);
+        uj(a.o);
+        Y("moh", Wk, void 0);
+        Y("mov", Xk, void 0);
+        Y(Xf, Vk, void 0);
+        Y(af, gl, void 0);
+        Y("mvu", il, void 0);
+        IS_VERSION_MOBILE || dn();
+        a.a.setCenter(c);
+        if (!b) {
+            var h = new Dl;
+            ro(v(function () {
+                this.b = new rm(h, this.a);
+                sm(this.b)
+            }, a));
+            14 >= O || (on = 0);
+            xn();
+            Y("puh", wn, void 0);
+            Y(af, xn, void 0);
+            yn(v(a.A, a));
+            ro(zn)
+        }
+        google.maps.event.addListener(a.a, "idle", v(a.u, a));
+        Oh("click", bl);
+        Oh("dragend", Pj);
+        "plat" in MAP_PARAMS && "plng" in MAP_PARAMS && (g = D(MAP_PARAMS, "plat", 0), c = D(MAP_PARAMS, "plng", 0), g && c &&
+        google.maps.event.addListenerOnce(a.a, "bounds_changed", na(Zk, g, c, !1)));
+        "pls" in MAP_PARAMS && sj();
+        "mission_guid" in MAP_PARAMS && $e("mdt", D(MAP_PARAMS, "mission_guid"), !0)
+    }
+
     console.log("Hacking function.");
     m_ii.prototype = ii.prototype;
     ii = m_ii;
@@ -172,6 +242,10 @@ $(document).ready(function () {
 
     m_Jj.prototype = Jj.prototype;
     Jj = m_Jj;
+
+    m_uo.prototype = uo.prototype;
+    uo = m_uo;
+
     console.log("Good boy.")
 //Ext, required from https://github.com/googollee/eviltransform
     var exports

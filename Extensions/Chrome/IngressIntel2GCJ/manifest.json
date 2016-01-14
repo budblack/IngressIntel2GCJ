@@ -1,7 +1,7 @@
 {
   "name": "__MSG_extName__",
   "short_name": "__MSG_extShortName__",
-  "version": "0.2.3.26",
+  "version": "0.2.3.27",
   "manifest_version": 2,
   "default_locale": "zh_CN",
   "description": "__MSG_extDescription__",
@@ -18,9 +18,5 @@
     "http://*/",
     "https://*/"
   ],
-  "background": {
-    "scripts": ["/js/background.js"],
-    "persistent": false
-  },
-  "web_accessible_resources":["teamplate/*"]
+  "web_accessible_resources":["teamplate/*","js/*"]
 }

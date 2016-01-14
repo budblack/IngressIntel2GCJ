@@ -22,7 +22,28 @@
 
     <link rel='stylesheet' type='text/css' href='https://storage.googleapis.com/ingress.com/artifacts/artifacts.css' />
     <script type="text/javascript" src="https://budblack.me/Lab/Ingress/IngressIntel2GCJ/JSHacker/jquery-2.1.4.js"></script>
-
+    <style>
+        #player_stats{
+            margin-top: 32px;
+            margin-left: 8px;
+            opacity: .8;
+        }
+        #filters_container{
+            bottom: 36px;
+            opacity: .8;
+        }
+        #loading_msg{
+            bottom: 32px;
+            right: 32px;
+        }
+        #display_msg{
+            bottom: 24px;
+            height: 24px;
+        }
+        form{
+            opacity: .8;
+        }
+    </style>
 </head>
 
 <body onload="initialize()" id="dashboard">
@@ -120,11 +141,17 @@
 </div>
 
 <!-- Dashboard Container -->
-<div id="dashboard_container">
-    <div id="tm_button" class="unselectable bottom_right_tab_button">
+<div id="dashboard_container" style="
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+">
+    <div id="tm_button" class="unselectable bottom_right_tab_button" style="bottom: 2px;">
         Missions
     </div>
-    <div id="tm_view_container">
+    <div id="tm_view_container" style="top: 92px;right: 58px;opacity: .8;">
         <div id="tm_header" style="display: none;"></div>
         <div id="tm_main" style="display: none;"></div>
     </div>
@@ -133,22 +160,16 @@
     <div id="map_canvas"></div>
 
     <!-- Player Stats -->
-    <div id="player_stats"></div>
-
-    <!-- Game Stats -->
-    <div id="game_stats">
-        <div id="global_score"></div>
-        <div id="rs_box">
-            <div id="rs_details_box"></div>
-            <div id="rs_details_score"></div>
-        </div>
-    </div>
+    <div id="player_stats" class=""></div>
 
     <!-- Clear Planned Links Button -->
     <div id="clear_planned_links"></div>
 
     <!-- Geo Location Tools -->
-    <div id="geotools">
+    <div id="geotools" style="
+    margin-top: 74px;
+    margin-right: 64px;
+    ">
         <form onSubmit="doGeocode(); return false;" name="geocode_name" id="geocode">
             <input type='hidden' name='csrfmiddlewaretoken' value='OpxVd350kwJBc5ZEIijRjjv9bOTUXSba' />
             <input type="text" id="address" placeholder="enter location" />
@@ -157,10 +178,13 @@
     </div>
 
     <!-- COMMs Panel -->
-    <div id="comm"></div>
+    <div id="comm" style="
+        bottom: 2px;
+        left: 2px;
+    "></div>
 
     <!--Portal filter. The visibility of the portal filter is changed when the document loads. -->
-    <div id="filters_container" style="display:none;" class="unselectable">
+    <div id="filters_container" style="display:none;" class="unselectable" >
         <div id="level_filter_container">
             <div class="filter_row">
                 <div class="filter_title" id="filter_title_level">Level</div>
@@ -300,7 +324,7 @@
         </div>
     </div>
 
-    <div id="portal_filter_header" class="unselectable bottom_right_tab_button">Filters</div>
+    <div id="portal_filter_header" class="unselectable bottom_right_tab_button" style="bottom: 2px;">Filters</div>
 
     <!-- Dashboard stale data message -->
     <div id="butterbar" style="display: none;" class="box_drop_shadow">
